@@ -56,20 +56,24 @@ RegisterNumber: 212224240134
 ```
 
 ```
-module exp4(s,r,clk,q,qbar);
-input s,r,clk;
-output reg q,qbar;
-initial 
-begin
-q<=0;
-qbar<=1;
-end
-always @(posedge clk)
-begin
-q=(s|(~r&q));
-qbar=(r|(~s&~q));
-end
-endmodule
+module jk_ff (j, k, clk, rst, q);
+  input j,k,clk,rst;
+  output reg q;
+  always @(posedge clk or posedge rst)
+  begin
+    if (rst)
+      q <= 0; // Reset the flip-flop
+    else if (j == 0 && k == 0)
+      q <= q; // No change
+    else if (j == 0 && k == 1)
+      q <= 0; // Reset
+    else if (j == 1 && k == 0)
+      q <= 1; // Set
+    else if (j == 1 && k == 1)
+      q <= ~q; // Toggle
+  end 
+ endmodule
+
 ```
 **RTL LOGIC FOR FLIPFLOPS**
 
