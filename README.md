@@ -77,14 +77,16 @@ module jk_ff (j, k, clk, rst, q);
 ```
 **RTL LOGIC FOR FLIPFLOPS**
 
-![image](https://github.com/user-attachments/assets/31b20e95-8014-400e-8b7e-53b5cc283e54)
+
+![image](https://github.com/user-attachments/assets/6f823d7a-c448-4a8e-b364-dcec20a902ca)
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-![image](https://github.com/user-attachments/assets/8da41aa5-8d80-4c70-9f47-e0ae64936b23)
+![image](https://github.com/user-attachments/assets/3d9e9790-8244-4d8e-8e43-ae446fe37772)
+
 
 
 **RESULTS**
 
-SR flipflop is implemented using verilog and their functionality is validated using their functional tables.
+JK flipflop is implemented using verilog and their functionality is validated using their functional tables.
